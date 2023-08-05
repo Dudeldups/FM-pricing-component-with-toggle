@@ -2,9 +2,24 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Bold.ttf");
+  src: url("./src/assets/fonts/Montserrat-Bold.ttf");
 }
 
 body {
   font: 700 0.9375rem/1.75rem "Montserrat", sans-serif;
+}
+
+.form {
+  text-align: center;
+
+  &__title {
+    color: $clr-primary-500;
+    font-size: 2rem;
+  }
+}
+
+.toggle {
+  &__text {
+    color: rgba($clr-primary-500, 0.9);
+  }
 }

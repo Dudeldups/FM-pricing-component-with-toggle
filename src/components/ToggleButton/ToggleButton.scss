@@ -2,5 +2,35 @@
 
 .toggle {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.25rem;
+    width: 3.5rem;
+    background: linear-gradient($grd-primary);
+    border-radius: 100rem;
+  }
+
+  &__input:focus ~ &__container {
+    outline: 0.2rem solid black;
+    outline-offset: 0.2rem;
+  }
+
+  &__circle {
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &__input:checked ~ &__container &__circle {
+    transform: translateX(100%);
+  }
 }

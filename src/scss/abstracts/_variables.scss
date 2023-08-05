@@ -1,3 +1,12 @@
 @use "functions" as *;
 
 // colors
+
+$clr-primary-100: #f6f6fe;
+$clr-primary-300: #b3b5c6;
+$clr-primary-500: #585b7a;
+$clr-primary-700: #45485c;
+
+// gradients
+
+$grd-primary: 135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%);
