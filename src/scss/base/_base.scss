@@ -1,9 +1,12 @@
 @use "../abstracts/" as *;
 
 body {
-  // background: url("images/bg-top.svg") cover no-repeat;
-
-  background-color: $clr-primary-100;
+  background: {
+    color: $clr-primary-100;
+    image: url("images/bg-top.svg");
+    repeat: no-repeat;
+    position: top -2rem right -12rem;
+  }
 }
 
 fieldset {

@@ -1,23 +1,31 @@
 @use "../../scss/abstracts" as *;
 
+.outer {
+  display: grid;
+  place-content: center;
+}
+
 .toggle {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
+  cursor: pointer;
 
   &__container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     padding: 0.25rem;
     width: 3.5rem;
     background: linear-gradient($grd-primary);
     border-radius: 100rem;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
-  &__input:focus ~ &__container {
+  &__input:focus-visible ~ &__container {
     outline: 0.2rem solid black;
     outline-offset: 0.2rem;
   }
