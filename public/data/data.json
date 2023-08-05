@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Basic",
+    "price": {
+      "monthly": "19.99",
+      "annually": "199.99"
+    },
+    "features": {
+      "storageAmount": "500 GB",
+      "userAmount": "2",
+      "transferAmount": "3 GB"
+    }
+  },
+  {
+    "name": "Professional",
+    "price": {
+      "monthly": "24.99",
+      "annually": "249.99"
+    },
+    "features": {
+      "storageAmount": "1 TB",
+      "userAmount": "5",
+      "transferAmount": "10 GB"
+    }
+  },
+  {
+    "name": "Master",
+    "price": {
+      "monthly": "39.99",
+      "annually": "399.99"
+    },
+    "features": {
+      "storageAmount": "2 TB",
+      "userAmount": "10",
+      "transferAmount": "20 GB"
+    }
+  }
+]

@@ -1,0 +1,23 @@
+@use "../../scss/abstracts" as *;
+
+.card {
+  padding: 2rem 1.8rem;
+  background-color: white;
+
+  &__title {
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__feature {
+  }
+}

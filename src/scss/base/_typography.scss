@@ -23,3 +23,21 @@ body {
     color: rgba($clr-primary-500, 0.9);
   }
 }
+
+.card {
+  color: $clr-primary-500;
+
+  &__title {
+    font-size: 1.125rem;
+  }
+
+  &__price {
+    font-size: 4.5rem;
+    letter-spacing: -0.135rem;
+    color: $clr-primary-700;
+  }
+
+  &__dollar-sign {
+    font-size: 2.5rem;
+  }
+}

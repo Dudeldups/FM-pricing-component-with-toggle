@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from "./components/Form/Form";
 
 export default function App() {
@@ -17,7 +17,6 @@ export default function App() {
       <h1 className="sr-only">
         This is a component from a Frontend Mentor challenge
       </h1>
-
       <Form isMonthlyPayment={isMonthlyPayment} handleChange={handleChange} />
     </main>
   );

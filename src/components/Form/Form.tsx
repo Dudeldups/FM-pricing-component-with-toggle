@@ -1,3 +1,4 @@
+import CardContainer from "../CardContainer/CardContainer";
 import ToggleButton from "../ToggleButton/ToggleButton";
 
 import "./Form.scss";
@@ -20,6 +21,8 @@ export default function Form({ isMonthlyPayment, handleChange }: Props) {
           handleChange={handleChange}
         />
       </fieldset>
+
+      <CardContainer isMonthlyPayment={isMonthlyPayment} />
     </form>
   );
 }

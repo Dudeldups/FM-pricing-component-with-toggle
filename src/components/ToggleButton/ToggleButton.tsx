@@ -15,6 +15,7 @@ export default function ToggleButton({
         <span className="sr-only">
           {isMonthlyPayment ? "monthly" : "annual"} payment method is active
         </span>
+
         <input
           className="toggle__input sr-only"
           type="checkbox"
@@ -23,6 +24,7 @@ export default function ToggleButton({
           checked={isMonthlyPayment}
           onChange={handleChange}
         />
+
         <span className="toggle__text" aria-hidden="true">
           Annually
         </span>
