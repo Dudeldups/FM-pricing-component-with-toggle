@@ -28,9 +28,9 @@ export default function ToggleButton({
         <span className="toggle__text" aria-hidden="true">
           Annually
         </span>
-        <div className="toggle__container">
-          <div className="toggle__circle"></div>
-        </div>
+        <span className="toggle__container">
+          <span className="toggle__circle"></span>
+        </span>
         <span className="toggle__text" aria-hidden="true">
           Monthly
         </span>

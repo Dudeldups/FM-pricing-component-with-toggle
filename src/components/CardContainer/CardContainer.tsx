@@ -39,7 +39,7 @@ export default function CardContainer({ isMonthlyPayment }: Props) {
     fetchData();
   }, []);
   return (
-    <div>
+    <div className="card-container">
       {!subscriptionData ? (
         <p>Loading...</p>
       ) : (
@@ -53,6 +53,16 @@ export default function CardContainer({ isMonthlyPayment }: Props) {
                 <legend>
                   <h3 className="card__title">{name}</h3>
                 </legend>
+
+                <input
+                  className="sr-only"
+                  type="radio"
+                  name="subscription"
+                  id={name}
+                  value={name}
+                  defaultChecked={name === "Professional"}
+                />
+
                 <div className="card__price">
                   <p className="card__dollar-sign">$</p>
                   <p className="card__amount">
@@ -64,7 +74,9 @@ export default function CardContainer({ isMonthlyPayment }: Props) {
                   <li className="card__feature">{userAmount} Users Allowed</li>
                   <li className="card__feature">Send up to {transferAmount}</li>
                 </ul>
-                <input type="radio" name="subscription" id="" />
+                <label className="sr-only" htmlFor={name}>
+                  {name} plan
+                </label>
                 <Btn />
               </fieldset>
             </div>

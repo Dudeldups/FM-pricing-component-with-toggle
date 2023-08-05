@@ -1,8 +1,17 @@
 @use "../../scss/abstracts" as *;
 
+.card-container {
+  display: grid;
+  gap: 2rem 0;
+  padding-block: 5rem;
+  margin-inline: auto;
+  max-width: 21.875rem;
+}
+
 .card {
-  padding: 2rem 1.8rem;
+  padding: 1.95rem get-clamp(1.5rem, 1.8rem, 20rem, 23.4375rem);
   background-color: white;
+  border-radius: 0.625rem;
 
   &__title {
   }
@@ -12,12 +21,21 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    margin-top: 2.8rem;
   }
 
   &__list {
+    margin-top: 3.4rem;
     list-style-type: none;
   }
 
   &__feature {
+    padding: 0.75rem;
+    border-top: 0.0625rem solid $clr-primary-300;
+
+    &:last-child {
+      margin-bottom: 2rem;
+      border-bottom: 0.0625rem solid $clr-primary-300;
+    }
   }
 }

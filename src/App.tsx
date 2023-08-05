@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Form from "./components/Form/Form";
 
 export default function App() {

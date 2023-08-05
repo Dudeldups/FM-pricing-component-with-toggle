@@ -1,7 +1,6 @@
 @use "../../scss/abstracts" as *;
 
 .form {
-  background-color: palegoldenrod;
-  padding-block: 4rem;
-  padding-inline: 1.5rem;
+  padding-top: 4rem;
+  padding-inline: get-clamp(1.2rem, 1.5rem, 20rem, 23.4375rem);
 }
