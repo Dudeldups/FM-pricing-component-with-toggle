@@ -4,6 +4,7 @@ import "./CardContainer.scss";
 
 type Props = {
   isMonthlyPayment: boolean;
+  handleChange: React.ChangeEventHandler<HTMLInputElement>;
 };
 
 interface Plan {
@@ -48,20 +49,13 @@ export default function CardContainer({ isMonthlyPayment }: Props) {
           const { storageAmount, userAmount, transferAmount } = features;
 
           return (
-            <div key={name} className="card">
+            <div
+              key={name}
+              className={`card ${name === "Professional" && "preferred"}`}>
               <fieldset>
                 <legend>
                   <h3 className="card__title">{name}</h3>
                 </legend>
-
-                <input
-                  className="sr-only"
-                  type="radio"
-                  name="subscription"
-                  id={name}
-                  value={name}
-                  defaultChecked={name === "Professional"}
-                />
 
                 <div className="card__price">
                   <p className="card__dollar-sign">$</p>
@@ -74,9 +68,6 @@ export default function CardContainer({ isMonthlyPayment }: Props) {
                   <li className="card__feature">{userAmount} Users Allowed</li>
                   <li className="card__feature">Send up to {transferAmount}</li>
                 </ul>
-                <label className="sr-only" htmlFor={name}>
-                  {name} plan
-                </label>
                 <Btn />
               </fieldset>
             </div>

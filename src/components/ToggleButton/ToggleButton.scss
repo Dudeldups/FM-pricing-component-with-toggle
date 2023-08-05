@@ -1,31 +1,26 @@
 @use "../../scss/abstracts" as *;
 
-.outer {
-  display: grid;
-  place-content: center;
-}
-
 .toggle {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
-  cursor: pointer;
 
-  &__container {
+  &__label {
     padding: 0.25rem;
     width: 3.5rem;
     background: linear-gradient($grd-primary);
     border-radius: 100rem;
     transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       transform: scale(1.05);
     }
   }
 
-  &__input:focus-visible ~ &__container {
+  &__input:focus-visible ~ &__label {
     outline: 0.2rem solid black;
     outline-offset: 0.2rem;
   }
@@ -39,7 +34,11 @@
     transition: transform 0.2s ease-in-out;
   }
 
-  &__input:checked ~ &__container &__circle {
+  &__input:checked ~ &__label &__circle {
     transform: translateX(100%);
+  }
+
+  &__text {
+    cursor: pointer;
   }
 }

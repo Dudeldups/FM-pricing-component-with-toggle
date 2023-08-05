@@ -1,14 +1,20 @@
+import { useState } from "react";
 import CardContainer from "../CardContainer/CardContainer";
 import ToggleButton from "../ToggleButton/ToggleButton";
 
 import "./Form.scss";
 
-type Props = {
-  isMonthlyPayment: boolean;
-  handleChange: React.ChangeEventHandler<HTMLInputElement>;
-};
+export default function Form() {
+  const [isMonthlyPayment, setIsMonthlyPayment] = useState(true);
 
-export default function Form({ isMonthlyPayment, handleChange }: Props) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { type } = e.target;
+
+    if (type === "checkbox") {
+      setIsMonthlyPayment(prev => !prev);
+    }
+  };
+
   return (
     <form className="form" action="#">
       <fieldset>
@@ -18,11 +24,15 @@ export default function Form({ isMonthlyPayment, handleChange }: Props) {
 
         <ToggleButton
           isMonthlyPayment={isMonthlyPayment}
+          setIsMonthlyPayment={setIsMonthlyPayment}
           handleChange={handleChange}
         />
       </fieldset>
 
-      <CardContainer isMonthlyPayment={isMonthlyPayment} />
+      <CardContainer
+        isMonthlyPayment={isMonthlyPayment}
+        handleChange={handleChange}
+      />
     </form>
   );
 }

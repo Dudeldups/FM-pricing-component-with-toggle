@@ -2,39 +2,50 @@ import "./ToggleButton.scss";
 
 type Props = {
   isMonthlyPayment: boolean;
+  setIsMonthlyPayment: React.Dispatch<React.SetStateAction<boolean>>;
   handleChange: React.ChangeEventHandler<HTMLInputElement>;
 };
 
 export default function ToggleButton({
   isMonthlyPayment,
+  setIsMonthlyPayment,
   handleChange,
 }: Props) {
+  const handleClick = (newState: boolean) => {
+    setIsMonthlyPayment(newState);
+  };
+
   return (
-    <div className="outer">
-      <label className="toggle" htmlFor="togglePaymentMethod">
+    <div className="toggle">
+      <p
+        className="toggle__text"
+        aria-hidden="true"
+        onClick={() => handleClick(false)}>
+        Annually
+      </p>
+
+      <input
+        className="toggle__input sr-only"
+        type="checkbox"
+        name="togglePaymentMethod"
+        id="togglePaymentMethod"
+        checked={isMonthlyPayment}
+        onChange={handleChange}
+      />
+
+      <label className="toggle__label" htmlFor="togglePaymentMethod">
         <span className="sr-only">
           {isMonthlyPayment ? "monthly" : "annual"} payment method is active
         </span>
-
-        <input
-          className="toggle__input sr-only"
-          type="checkbox"
-          name="togglePaymentMethod"
-          id="togglePaymentMethod"
-          checked={isMonthlyPayment}
-          onChange={handleChange}
-        />
-
-        <span className="toggle__text" aria-hidden="true">
-          Annually
-        </span>
-        <span className="toggle__container">
-          <span className="toggle__circle"></span>
-        </span>
-        <span className="toggle__text" aria-hidden="true">
-          Monthly
-        </span>
+        <span className="toggle__circle"></span>
       </label>
+
+      <p
+        className="toggle__text"
+        aria-hidden="true"
+        onClick={() => handleClick(true)}>
+        Monthly
+      </p>
     </div>
   );
 }

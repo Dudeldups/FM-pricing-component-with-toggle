@@ -13,7 +13,8 @@
   background-color: white;
   border-radius: 0.625rem;
 
-  &__title {
+  &.preferred {
+    background-image: linear-gradient($grd-primary);
   }
 
   &__price {

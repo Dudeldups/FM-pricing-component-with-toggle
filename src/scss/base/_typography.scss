@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("./src/assets/fonts/Montserrat-Bold.ttf");
+  src: url("assets/fonts/Montserrat-Bold.ttf");
 }
 
 body {
@@ -21,11 +21,16 @@ body {
 .toggle {
   &__text {
     color: rgba($clr-primary-500, 0.9);
+    user-select: none;
   }
 }
 
 .card {
   color: $clr-primary-500;
+
+  &.preferred {
+    color: white;
+  }
 
   &__title {
     font-size: 1.125rem;
@@ -35,6 +40,10 @@ body {
     font-size: 4.5rem;
     letter-spacing: -0.135rem;
     color: $clr-primary-700;
+  }
+
+  &.preferred &__price {
+    color: white;
   }
 
   &__dollar-sign {
