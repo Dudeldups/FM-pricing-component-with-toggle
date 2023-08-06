@@ -6,7 +6,7 @@ This is a solution to the [Pricing component with toggle challenge on Frontend M
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  <!-- - [Added features](#added-features) -->
+  - [Added features](#added-features)
   - [Links](#links)
   - [Screenshot](#screenshot)
 - [My process](#my-process)
@@ -29,7 +29,7 @@ Your users should be able to:
 
 ### Links
 
-<!-- - [Solution on Frontend Mentor]() -->
+- [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/reacttsscss-pricing-component-with-toggle-6ByGjPKB2s)
 
 - [Live site](https://fm-pricing-component-with-toggle-9000.netlify.app/)
 
@@ -37,7 +37,7 @@ Your users should be able to:
 
 #### Desktop
 
-<!-- ![Solution]() -->
+![Solution](https://github.com/Dudeldups/FM-pricing-component-with-toggle/blob/main/screenshots/solution.png)
 
 ## My process
 
