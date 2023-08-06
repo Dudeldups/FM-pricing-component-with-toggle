@@ -3,14 +3,15 @@
 body {
   background: {
     color: $clr-primary-100;
-    image: url("assets/images/bg-top.svg");
+    image: url("/assets/images/bg-top.svg");
     repeat: no-repeat;
     position: top -2rem right -12rem;
   }
 
   @include mq($bp-desktop) {
     background: {
-      image: url("assets/images/bg-top.svg"), url("assets/images/bg-bottom.svg");
+      image: url("/assets/images/bg-top.svg"),
+        url("/assets/images/bg-bottom.svg");
       position: top right, bottom left;
     }
 
