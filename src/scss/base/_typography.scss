@@ -56,4 +56,14 @@ body {
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.087rem;
+
+  &:hover,
+  &:focus-visible {
+    color: $clr-secondary-500;
+  }
+
+  .preferred &:hover,
+  .preferred &:focus-visible {
+    color: white;
+  }
 }

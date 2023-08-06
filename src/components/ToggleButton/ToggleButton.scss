@@ -17,6 +17,7 @@
 
     &:hover {
       transform: scale(1.05);
+      opacity: 0.8;
     }
   }
 
@@ -40,5 +41,10 @@
 
   &__text {
     cursor: pointer;
+    transition: transform 0.2s ease-in;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 }
