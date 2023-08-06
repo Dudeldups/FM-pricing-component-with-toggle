@@ -7,7 +7,7 @@ type Props = {
   handleChange: React.ChangeEventHandler<HTMLInputElement>;
 };
 
-interface Plan {
+type Plan = {
   name: string;
   price: {
     monthly: string;
@@ -18,7 +18,7 @@ interface Plan {
     userAmount: string;
     transferAmount: string;
   };
-}
+};
 
 export default function CardContainer({ isMonthlyPayment }: Props) {
   const [subscriptionData, setSubscriptionData] = useState<Plan[] | null>(null);
@@ -63,12 +63,14 @@ export default function CardContainer({ isMonthlyPayment }: Props) {
                     {isMonthlyPayment ? price.monthly : price.annually}
                   </p>
                 </div>
+
                 <ul className="card__list">
                   <li className="card__feature">{storageAmount} Storage</li>
                   <li className="card__feature">{userAmount} Users Allowed</li>
                   <li className="card__feature">Send up to {transferAmount}</li>
                 </ul>
-                <Btn />
+
+                <Btn name={name} />
               </fieldset>
             </div>
           );

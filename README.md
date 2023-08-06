@@ -23,7 +23,9 @@ Your users should be able to:
 - Control the toggle with both their mouse/trackpad and their keyboard
 - **Bonus**: Complete the challenge with just HTML and CSS
 
-<!-- ### Added features -->
+### Added features
+
+- You can also change the payment plan by clicking on the words
 
 ### Links
 

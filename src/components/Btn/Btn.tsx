@@ -1,10 +1,13 @@
 import "./Btn.scss";
 
-type Props = {};
-export default function Btn({}: Props) {
+type Props = {
+  name: string;
+};
+
+export default function Btn({ name }: Props) {
   return (
     <button className="btn" type="button">
-      Learn more
+      Learn more <span className="sr-only">about the {name} plan</span>
     </button>
   );
 }

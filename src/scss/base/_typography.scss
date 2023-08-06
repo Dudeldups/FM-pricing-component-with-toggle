@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("assets/fonts/Montserrat-Bold.ttf");
+  src: url("/assets/fonts/Montserrat-Bold.ttf");
 }
 
 body {
@@ -37,7 +37,8 @@ body {
   }
 
   &__price {
-    font-size: 4.5rem;
+    font-size: get-clamp(3.8rem, 4.5rem, 20rem, 23.4375rem);
+    line-height: 4.4375rem;
     letter-spacing: -0.135rem;
     color: $clr-primary-700;
   }
